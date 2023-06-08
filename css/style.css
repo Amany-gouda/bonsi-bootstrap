@@ -1,0 +1,193 @@
+:root {
+  --dark-color: #19283f;
+  --main-color: #33d1cc;
+  --red: #ff3150;
+  --yellow: #ffc400;
+  --section-color: #eff7fa;
+}
+/* component */
+.btn-main {
+  color: var(--yellow);
+  background-color: var(--red);
+  text-transform: uppercase;
+}
+.btn-main:hover {
+  color: white;
+}
+.main-title:after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: -20px;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  left: 50%;
+}
+/* end component */
+body {
+  font-family: "Roboto", sans-serif;
+}
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav {
+}
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+  color: var(--main-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  border: 1px solid white;
+  font-size: 25px;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--main-color);
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .search {
+  color: var(--main-color);
+  border-left: 1px solid var(--main-color);
+}
+/* start landing */
+.landing {
+  background-color: var(--dark-color);
+  height: calc(100vh - 72px);
+}
+/* end landing */
+/* start feartures */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  color: var(--section-color);
+  font-size: 12rem;
+}
+.features .icon-holder .icon {
+  color: var(--main-color);
+}
+/* end features */
+/* start our work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work .links li {
+  cursor: pointer;
+}
+.our-work .links li:not(:first-of-type) a {
+  color: black;
+}
+.our-work .links li:not(:first-of-type):hover a {
+  color: var(--red);
+}
+.our-work .links li.active {
+  background-color: var(--red);
+}
+.our-work .links li.active a {
+  color: var(--yellow);
+}
+.our-work .links li.active:hover a {
+  color: white;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  background-color: #33d1ccc2;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  top: 5px;
+  left: 5px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+/* end our work */
+/* start design */
+.design .text p {
+  max-width: 500px;
+}
+/* end design */
+/* start team */
+.team {
+  background-color: var(--section-color);
+}
+.team .heading h2 {
+  color: var(--yellow);
+}
+.team .box h4 {
+  background-color: var(--main-color);
+  color: white;
+}
+/* end team */
+/* start section */
+.start {
+  background-color: var(--dark-color);
+}
+/* end start section */
+.mail {
+  background-color: var(--yellow);
+}
+.mail input[type="email"] {
+  border-style: none;
+  border-bottom: 1px solid white;
+}
+.mail input[type="email"]::placeholder {
+  color: white;
+}
+.mail input[type="email"]:focus {
+  outline: none;
+}
+.mail .btn-yel {
+  color: var(--yellow);
+  background-color: var(--dark-color);
+}
+footer {
+  background-color: var(--dark-color);
+}
+footer .copyright span:first-child {
+  color: var(--main-color);
+}
+footer .copyright span:last-child {
+  color: var(--yellow);
+}
+
+footer ul svg {
+  width: 20px;
+  height: 20px;
+}
+footer ul .facebook {
+  background-color: #1877f2;
+}
+footer ul .linkedin {
+  background-color: #0a66c2;
+}
+footer ul .youtube {
+  background-color: #ff0000;
+}
+footer ul .twitter {
+  background-color: #1da1f2;
+}
